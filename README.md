@@ -12,7 +12,7 @@ Buatlah sebuah fungsi yang menerima parameter berupa data variadic, dan kembalia
 - status didapat jika statistic rata-rata melebihi 50 maka sisi dengan true, jika dibawah atau sama dengan 50 isi dengan false
 
 ```js
-Contoh
+Test case
 
 GetStatistic(76,80,50,50,60,70)
 GetStatistic(50,50,50)
@@ -57,7 +57,7 @@ GetStatistic(90,90,90,90)
 buatlah sebuah fungsi yang dapat menambah nilai dan menghitung rata - rata hasil dari data yang diinput ditambah dengan data yang sudah ada :
 
 ```js
-Contoh
+Test case
 
 number = [80,80,90,90]
 
