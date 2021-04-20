@@ -26,6 +26,13 @@ func GetStatistic(numbers... int) {
 		avarage = division
 	}
 
+	var checkBool bool
+
+	if avarage > 50 {
+		checkBool = true
+	} else if avarage < 50 {
+		checkBool = false
+	}
 
 	minimum := numbers[0]
 	maximum := numbers[0]
@@ -41,7 +48,7 @@ func GetStatistic(numbers... int) {
 	addData := Data{}
 
 	addData = Data{
-		status: true,
+		status: checkBool,
 		score: numbers,
 	}
 	addData.statistic = Statistic{
@@ -52,7 +59,9 @@ func GetStatistic(numbers... int) {
 	fmt.Println(addData)
 }
 
-
-func main(){
+func main()  {
 	GetStatistic(76,80,50,50,60,70)
+	GetStatistic(50,50,50)
+	GetStatistic(90,90,90,90)
+	
 }
