@@ -15,6 +15,12 @@ type Report struct {
 	statistic Statistic
 }
 
+func main() {
+	GetStatistic(76, 80, 50, 50, 60, 70)
+	GetStatistic(50, 50, 50)
+	GetStatistic(90, 90, 90, 90)
+}
+
 func getStat(data ...int) (avg, min, max int) {
 	min = data[0]
 	max = data[0]
@@ -52,10 +58,4 @@ func GetStatistic(data ...int) Report {
 
 	fmt.Println(report)
 	return report
-}
-
-func main() {
-	GetStatistic(76, 80, 50, 50, 60, 70)
-	GetStatistic(50, 50, 50)
-	GetStatistic(90, 90, 90, 90)
 }
