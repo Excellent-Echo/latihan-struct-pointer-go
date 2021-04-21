@@ -16,6 +16,12 @@ type Stats struct {
 	Average, Minimum, Maximum int
 }
 
+func main() {
+	GetStatistic(76, 80, 50, 50, 60, 70)
+	GetStatistic(50, 50, 50)
+	GetStatistic(90, 90, 90, 90)
+}
+
 func GetStatistic(scores ...int) string {
 	var avg, max, sum int
 	min := math.MaxInt64
@@ -53,10 +59,4 @@ func GetStatistic(scores ...int) string {
 	}
 	fmt.Println(string(result))
 	return ""
-}
-
-func main() {
-	GetStatistic(76, 80, 50, 50, 60, 70)
-	GetStatistic(50, 50, 50)
-	GetStatistic(90, 90, 90, 90)
 }
