@@ -1,11 +1,5 @@
 package helper
 
-// func change(old *int, new int) {
-// 	*old = new
-// 	fmt.Println("melakukan eksekusi fungsi")
-// 	fmt.Println(*old)
-// }
-
 func Change(original *[]int, value []int) {
 	*original = value
 }

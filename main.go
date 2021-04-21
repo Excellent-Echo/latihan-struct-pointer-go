@@ -20,16 +20,16 @@ func main() {
 	number := []int{80, 80, 90, 90}
 
 	avgSlice, avg := helper.GetAverage(number, 70, 70)
-	fmt.Println(avg)
+	fmt.Println(avg) //80
 
 	helper.Change(&number, avgSlice)
 
 	avgSlice, avg2 := helper.GetAverage(number, 60, 60)
-	fmt.Println(avg2)
+	fmt.Println(avg2) //75
 
 	helper.Change(&number, avgSlice)
 
-	avgSlice, avg3 := helper.GetAverage(number, 50, 40, 80)
-	fmt.Println(avg3)
+	_, avg3 := helper.GetAverage(number, 50, 40, 80)
+	fmt.Println(avg3) //70
 
 }
