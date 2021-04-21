@@ -9,10 +9,12 @@ func main() {
 	//Latihan Struct
 
 	statistic := helper.GetStatistic(76, 80, 50, 50, 60, 70)
-	// result := GetStatistic(50, 50, 50)
-	// result := GetStatistic(90, 90, 90, 90)
+	statistic2 := helper.GetStatistic(50, 50, 50)
+	statistic3 := helper.GetStatistic(90, 90, 90, 90)
 
 	fmt.Println(statistic)
+	fmt.Println(statistic2)
+	fmt.Println(statistic3)
 	fmt.Printf("========================================\n")
 
 	//Latihan Pointer
