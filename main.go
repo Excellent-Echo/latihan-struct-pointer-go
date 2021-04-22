@@ -1,59 +1,59 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"functionGo/function"
+)
 
 func main() {
-    
-    getStatistic(76,70,20,70,10, 30, 90, 5)
-    
+
+	var number = []int{80, 80, 90, 90}
+	// fmt.Println(GetAverage(number, 70))
+
+	fmt.Println("Latihan struct")
+	function.GetStatistic(76, 70, 20, 70, 10, 30, 90, 5)
+
+	fmt.Println("Latihan pointer")
+	avg := function.GetAverage(&number, 70, 70)
+	avg2 := function.GetAverage(&number, 60, 60)
+	avg3 := function.GetAverage(&number, 50, 40, 80)
+	fmt.Println(avg)
+	fmt.Println(avg2)
+	fmt.Println(avg3)
+
 }
 
-type Data struct {
-    status bool
-    score []int
-    statistic Statistic
-}
+// package main
 
-type Statistic struct {
-    average int
-    maximum int
-    minimum int
-}
+// import "fmt"
 
-func getStatistic(value ...int) {
-    data := Data{}
-    average := 0
-    data.statistic.maximum = value[0]
-    data.statistic.minimum = value[0]
-    // max := data.score[0]
-    // min := data.score[0]
-    
-    //looping untuk append value ke data score
-    for _, val := range value {
-        data.score = append(data.score, val)    
-    }
-    
-    //looping average and max min
-    for _, val := range data.score {
-        average += val
-        if val > data.statistic.maximum {
-            data.statistic.maximum = val
-        } else if val < data.statistic.minimum{
-            data.statistic.minimum = val
-        }
-    }
-    data.statistic.average = average / len(data.score)
-    
-    //condition status
-    if data.statistic.average > 50 {
-        data.status = true
-    } else {
-        data.status = false
-    }
-    
-    
-    
-    
-    fmt.Println(data)
-    
-}
+// func GetAverage(data *[]int, avg ...int) int {
+// 	var result int
+
+// 	for _, value := range avg {
+// 		*data = append(*data, value)
+// 	}
+// 	fmt.Println("ini newAvg", *data)
+// 	length := len(*data)
+// 	fmt.Println("ini length", length)
+
+// 	newData := 0
+// 	for _, value := range *data {
+// 		newData += value
+// 	}
+// 	fmt.Println("ini newData", newData)
+
+// 	result = newData / length
+// 	return result
+// }
+
+// func main() {
+// 	number := []int{80, 80, 90, 90}
+
+// 	avg := GetAverage(&number, 70, 70)
+// 	avg2 := GetAverage(&number, 60, 60)
+// 	avg3 := GetAverage(&number, 50, 40, 80)
+// 	fmt.Println(avg)
+// 	fmt.Println(avg2)
+// 	fmt.Println(avg3)
+// }
