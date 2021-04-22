@@ -1,9 +1,7 @@
 package main
 
-import "fmt"
-
 type Statistic struct {
-	average float32
+	average int
 	minimum int
 	maximum int
 }
@@ -14,7 +12,7 @@ type Respon struct {
 	Statistic
 }
 
-func GetStatistic(numbers ...int) {
+func GetStatistic(numbers ...int) map[string]Respon {
 	var (
 		sum, max, min, avg int
 	)
@@ -29,9 +27,19 @@ func GetStatistic(numbers ...int) {
 			min = number
 		}
 	}
-
 	avg = sum / len(numbers)
-	fmt.Println(avg, max, min)
+	res := Respon{}
+	res.status = true
+	res.score = numbers
+	res.average = avg
+	res.maximum = max
+	res.minimum = min
+
+	result := map[string]Respon{
+		"response": res,
+	}
+
+	return result
 }
 
 func main() {
