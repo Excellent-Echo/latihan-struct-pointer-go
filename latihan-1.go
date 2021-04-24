@@ -1,4 +1,4 @@
-package helper
+package main
 
 import (
 	"fmt"
@@ -59,3 +59,14 @@ func GetStatistic(numbers... int) {
 	fmt.Println(addData)
 }
 
+
+func main(){
+	GetStatistic(76,80,50,50,60,70)
+	fmt.Println("----------------------")
+
+	GetStatistic(50,50,50)
+	fmt.Println("----------------------")
+
+	GetStatistic(90,90,90,90)
+	fmt.Println("----------------------")
+}
